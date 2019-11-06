@@ -2,6 +2,8 @@
 #Linear Regression
 
 from bokeh.plotting import figure, show
+from bokeh.models import Slope
+
 #import numpy as np
 
 def mean(arr):
@@ -41,9 +43,11 @@ ypred = lambda x : (m * x) + b
 
 p = figure(plot_width=400, plot_height=400)
 p.circle(xarr, yarr, size=8, color="navy", alpha=0.5)
-linex = [min(xarr), max(xarr)]
-liney = [ypred(x) for x in linex]
-p.line(linex, liney, line_width=2)
+#linex = [min(xarr), max(xarr)]
+#liney = [ypred(x) for x in linex]
+#p.line(linex, liney, line_width=2)
+slope = Slope(gradient=m, y_intercept=b, line_color='red', line_dash='dashed', line_width=4)
+p.add_layout(slope)
 
 
 show(p)
