@@ -60,3 +60,15 @@ plt.scatter(xarr, yarr)
 plt.plot(linex,liney)
 plt.show()
 #show(p)
+
+"""
+psuedo-code implementation:
+mat1 = mat2 * X
+X = mat2inv * mat1
+n = degree
+np.matrix([[],[],...])
+
+mat1 = []
+for i in range(n+1):
+    row = "Sum(" + "yi * (xi ^ " + str() + ")" + ")"
+    mat.append(row)
